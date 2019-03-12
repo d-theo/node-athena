@@ -21,6 +21,7 @@ class AthenaRequest {
                 QueryExecutionContext: {
                     Database: config.database || 'default',
                 },
+                WorkGroup: config.workgroup || undefined,
             };
             const loopFunc = () => {
                 this.athena.startQueryExecution(params, (err, data) => {
